@@ -15,22 +15,22 @@ const Register = () => {
         {/* Decorative Images (Styles Unchanged) */}
         <img
           src={assets.patternLines}
-          alt="Pattern Lines"
+          alt="Pattern"
           className="absolute top-0 left-0 w-full h-full object-cover opacity-30 z-0"
         />
         <img
           src={assets.patternSquigglyLineTop}
-          alt="Pattern Top"
+          alt="Pattern"
           className="absolute top-10 right-0 transform -translate-x-1/2 opacity-90 z-0"
         />
         <img
           src={assets.patternSquigglyLineBottom}
-          alt="Pattern Bottom"
+          alt="Pattern"
           className="absolute w-200 bottom-0 left-0 opacity-70 z-0"
         />
         <img
           src={assets.patternCircle}
-          alt="Circle TL"
+          alt="Circle"
           className="absolute -top-16 left-16 w-48 opacity-80 z-0"
         />
         <img
@@ -44,7 +44,7 @@ const Register = () => {
           <div className="text-center mb-6">
             <img src={assets.logo} alt="logo" className="mx-auto w-38 mb-3" />
             <h1 className="text-2xl font-bold">Your Journey to Coding Conf 2025 Starts Here!</h1>
-            <p className="text-xs text-gray-200 mt-3 font-bold">Secure your spot at next year's biggest coding conference.</p>
+            <p className="text-xs text-gray-400 mt-3 font-bold">Secure your spot at next year's biggest coding conference.</p>
           </div>
 
           {/* Avatar Upload */}
