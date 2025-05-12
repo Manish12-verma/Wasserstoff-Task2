@@ -1,11 +1,11 @@
 import React from "react";
 import { assets } from "../assets/images/assets";
 
+
+
 const TicketGenerated = ({ photo, fullName, email, github }) => {
-  
   return (
-    <div
-      className="relative min-h-screen w-full bg-cover bg-no-repeat text-white flex flex-col items-center justify-center px-4 py-6">
+    <div className="relative min-h-screen w-full bg-cover bg-no-repeat text-white flex flex-col items-center justify-center px-4 py-6">
       <div className="relative z-10 w-full max-w-4xl px-4">
         <header className="flex flex-col items-center mb-20 text-center">
           <img src={assets.logo} alt="logo" className="w-32 md:w-40 mb-6" />
@@ -27,7 +27,6 @@ const TicketGenerated = ({ photo, fullName, email, github }) => {
           </h1>
         </header>
 
-      
         <img
           src={assets.pattTicket}
           alt="Ticket Decoration Overlay"
@@ -35,22 +34,22 @@ const TicketGenerated = ({ photo, fullName, email, github }) => {
         />
 
         <div className="relative z-40 bg-no-repeat bg-center aspect-[28/9] max-w-[700px] mx-auto p-6 md:p-8 rounded-xl text-white">
-      
-     
           <div className="relative z-20">
-            
-           
             <div className="mb-2 text-xl md:text-3xl font-bold flex items-center gap-4">
-              <img src={assets.logoMark} alt="Coding" className="w-8 md:w-10 sm:ml-17" />
-              <span className="text-lg md:text-xl  sm:text-xl">Coding Conf</span>
+              <img
+                src={assets.logoMark}
+                alt="Coding"
+                className="w-8 md:w-10 sm:ml-17"
+              />
+              <span className="text-lg md:text-xl  sm:text-xl">
+                Coding Conf
+              </span>
             </div>
 
-          
             <p className="text-neutral-300 pl-10 md:pl-14 mb-8 md:mb-12 text-sm md:text-base sm:text-xs ml-19">
-              Jan 31, 2025  |   Austin, TX
+              Jan 31, 2025 | Austin, TX
             </p>
 
-        
             <div className="flex flex-col pt-6 md:pt-10">
               <div className="flex items-center gap-4 md:gap-6 flex-wrap sm:">
                 <img
@@ -61,7 +60,11 @@ const TicketGenerated = ({ photo, fullName, email, github }) => {
                 <div className="text-xl md:text-3xl font-semibold">
                   <span>{fullName}</span>
                   <div className="flex items-center gap-2 mt-2">
-                    <img src={assets.iconGithub} alt="GitHub" className="w-4 md:w-5" />
+                    <img
+                      src={assets.iconGithub}
+                      alt="GitHub"
+                      className="w-4 md:w-5"
+                    />
                     <span className="text-sm font-light text-neutral-300">
                       {github}
                     </span>
@@ -79,6 +82,5 @@ const TicketGenerated = ({ photo, fullName, email, github }) => {
     </div>
   );
 };
-
 
 export default TicketGenerated;

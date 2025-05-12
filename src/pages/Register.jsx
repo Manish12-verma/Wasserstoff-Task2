@@ -12,7 +12,7 @@ const Register = () => {
   const [submitted, setSubmitted] = useState(false);
   const fileInputRef = useRef(null);
   
-
+  // Function to validate email format
   const isValidEmail = (email)=> {
     if (!email.includes('@')) return false;
     const [local, domain] = email.split('@');
@@ -20,11 +20,13 @@ const Register = () => {
     const domainParts = domain.split('.');
     return domainParts.length >= 2 && domainParts.at(-1).length >= 2;
   };
- 
+  
+  // Function to validate GitHub username format
   const isValidGitHubUsername = (username) => {
     return username.startsWith('@') && !username.includes(' ');
   };
-
+  
+  // Function to handle file input change
   const handleFileChange = (e) => {
     const file = e.target.files[0];
     if (!file) return;
@@ -34,13 +36,15 @@ const Register = () => {
       setPhoto(null);
       return;
     }
-
+    
+    // Check if the file is a valid image type
     if (!['image/png', 'image/jpeg'].includes(file.type)) {
       setErrors((prev) => ({ ...prev, photo: 'Invalid file extension.' }));
       setPhoto(null);
       return;
     }
-
+    
+    // Check if the file is a valid image
     const reader = new FileReader();
     reader.onload = (e) => {
       setPhoto(e.target.result);
@@ -48,7 +52,8 @@ const Register = () => {
     };
     reader.readAsDataURL(file);
   };
-
+  
+  // Function to handle form validation
   const handleValidation = () => {
     const newErrors = {};
     if (!photo) newErrors.photo = 'Upload your photo.';
@@ -60,13 +65,15 @@ const Register = () => {
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
-
+  
+  // Function to handle form submission
   const handleSubmit = () => {
     if (handleValidation()) {
       setSubmitted(true);
     }
   };
-
+  
+  // Function to handle image deletion
   const handleDeleteImage = () => {
     setPhoto(null);
     fileInputRef.current.value = '';
@@ -84,14 +91,14 @@ const Register = () => {
       <img src={assets.patternCircle} alt="Circle" className="absolute -top-16 left-16 w-48 opacity-80 z-0" />
       <img src={assets.patternCircle} alt="Circle" className="absolute top-4/6 right-16 transform -translate-y-1/2 w-48 opacity-80 z-0 mr-40" />
 
-      {!submitted ? (
+      
+      {!submitted ? (  //if not submitted, show the form
       <div className="z-10 w-full max-w-md bg-opacity-100 rounded-xl text-white  scale-85 ">
         <div className="text-center mb-6">
           <img src={assets.logo} alt="logo" className="mx-auto w-38 mb-3 scale-130 relative "/>
           <h1 className="text-2xl font-bold">Your Journey to Coding Conf 2025 Starts Here!</h1>
           <p className="text-xs text-gray-400 mt-3 font-bold">Secure your spot at next year's biggest coding conference.</p>
         </div>
-
         <div className="mb-5">
           <h3 className="text-base font-semibold mb-2">Upload Avatar</h3>
           <div className="border border-dashed border-gray-400 p-4 rounded-lg text-center">
@@ -106,7 +113,7 @@ const Register = () => {
               <img src={assets.iconUpload} alt="Upload Icon" className="w-8 h-8" />
               <span className="text-sm">Click to upload</span>
             </label>
-
+             
             {photo && (
               <div className="mt-3 flex gap-3 justify-center">
                 <button
@@ -184,8 +191,8 @@ const Register = () => {
           </button>
         </div>
       </div>
-       ) : (
-        <TicketGenerated photo={photo} fullName={fullName} email={email} github={github} />
+       ) : (  //if submitted, show the ticket
+        <TicketGenerated photo={photo} fullName={fullName} email={email} github={github} />  // Pass the photo, fullName, email, and github as props
       )}
     </div>
   );
