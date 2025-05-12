@@ -2,9 +2,7 @@ import React, { useRef, useState } from "react";
 import { assets } from "../assets/images/assets";
 import TicketGenerated from "./TicketGenerated";
 
-
 const Register = () => {
-
 
   const [photo, setPhoto] = useState(null);
   const [fullName, setFullName] = useState('');
@@ -57,7 +55,7 @@ const Register = () => {
     if (!email.trim()) newErrors.email = 'Enter your email.';
     else if (!isValidEmail(email)) newErrors.email = 'Enter a valid email address.';
     if (!github.trim()) newErrors.github = 'Enter your GitHub.';
-    else if (!isValidGitHubUsername(github)) newErrors.github = 'Enter a valid GitHub username.';
+    else if (!isValidGitHubUsername(github)) newErrors.github = 'Enter a valid GitHub username (eg. @username)';
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
@@ -83,12 +81,12 @@ const Register = () => {
       {/* Decorative Images */}
       <img src={assets.patternLines} alt="Pattern" className="absolute top-0 left-0 w-full h-full object-cover opacity-30 z-0" />
       <img src={assets.patternSquigglyLineTop} alt="Pattern" className="absolute top-10 right-0 transform -translate-x-1/2 opacity-90 z-0" />
-      <img src={assets.patternSquigglyLineBottom} alt="Pattern" className="absolute w-200 bottom-0 left-0 opacity-70 z-0" />
+      <img src={assets.patternSquigglyLineBottom} alt="Pattern" className="absolute w-120 bottom-0 left-0 opacity-70 z-0 " />
       <img src={assets.patternCircle} alt="Circle" className="absolute -top-16 left-16 w-48 opacity-80 z-0" />
       <img src={assets.patternCircle} alt="Circle" className="absolute top-4/6 right-16 transform -translate-y-1/2 w-48 opacity-80 z-0 mr-40" />
 
       {!submitted ? (
-      <div className="z-10 w-full max-w-md bg-opacity-100 rounded-xl p-4 text-white mt-0">
+      <div className="z-10 w-full max-w-md bg-opacity-100 rounded-xl text-white  scale-85 ">
         <div className="text-center mb-6">
           <img src={assets.logo} alt="logo" className="mx-auto w-38 mb-3" />
           <h1 className="text-2xl font-bold">Your Journey to Coding Conf 2025 Starts Here!</h1>
@@ -171,7 +169,7 @@ const Register = () => {
               value={github}
               onChange={(e) => setGitHub(e.target.value)}
               className="text-neutral-300 text-sm rounded-md p-3 bg-[rgba(75,72,106,0.25)] outline outline-[rgba(135,132,164,0.4)] w-full"
-              placeholder="Enter your GitHub username"
+              placeholder="Enter your GitHub username (eg. @username)"
             />
             {errors.github && <p className="text-red-400 text-xs mt-1">{errors.github}</p>}
           </div>

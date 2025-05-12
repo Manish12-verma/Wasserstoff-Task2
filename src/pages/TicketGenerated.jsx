@@ -6,9 +6,7 @@ const TicketGenerated = ({ photo, fullName, email, github }) => {
 
   return (
     <div
-      className="relative min-h-screen w-full bg-cover bg-no-repeat text-white flex flex-col items-center justify-center px-4 py-6"
-  
-    >
+      className="relative min-h-screen w-full bg-cover bg-no-repeat text-white flex flex-col items-center justify-center px-4 py-6">
 
       {/* Ticket Content */}
       <div className="relative z-10 w-full max-w-4xl px-4">
