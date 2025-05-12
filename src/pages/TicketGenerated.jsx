@@ -73,8 +73,8 @@ const TicketGenerated = ({ photo, fullName, email, github }) => {
               </div>
             </div>
 
-            <p className="absolute text-neutral-300  ml-30 md:text-2xl right-4 top-1/2 transform -translate-y-1/2 rotate-90 sm:absolute text-xl pr-14 mt-8">
-              #01609
+              <p className="absolute text-neutral-300 md:text-2xl right-0 top-1/2 transform -translate-y-1/2 rotate-90  sm:absolute text-xl pr-14 mt-8">
+              #016094
             </p>
           </div>
         </div>
