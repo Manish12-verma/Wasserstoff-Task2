@@ -6,7 +6,6 @@ const TicketGenerated = ({ photo, fullName, email, github }) => {
   return (
     <div
       className="relative min-h-screen w-full bg-cover bg-no-repeat text-white flex flex-col items-center justify-center px-4 py-6">
-
       <div className="relative z-10 w-full max-w-4xl px-4">
         <header className="flex flex-col items-center mb-20 text-center">
           <img src={assets.logo} alt="logo" className="w-32 md:w-40 mb-6" />
