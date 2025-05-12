@@ -55,7 +55,7 @@ const TicketGenerated = ({ photo, fullName, email, github }) => {
             <div className="flex flex-col pt-6 md:pt-10">
               <div className="flex items-center gap-4 md:gap-6 flex-wrap sm:">
                 <img
-                  className="w-20 h-20 md:w-24 md:h-24 rounded sm:ml-17"
+                  className="w-20 h-20 md:w-24 md:h-24 rounded sm:ml-17 mb-1"
                   src={photo}
                   alt="User avatar"
                 />
@@ -71,7 +71,6 @@ const TicketGenerated = ({ photo, fullName, email, github }) => {
               </div>
             </div>
 
-        
             <p className="absolute text-neutral-300  ml-30 md:text-2xl right-4 top-1/2 transform -translate-y-1/2 rotate-90 sm:absolute text-xl pr-14 mt-8">
               #01609
             </p>
@@ -81,5 +80,6 @@ const TicketGenerated = ({ photo, fullName, email, github }) => {
     </div>
   );
 };
+
 
 export default TicketGenerated;
