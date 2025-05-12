@@ -1,14 +1,14 @@
-# 🎟️ Coding Conf Ticket Generator
+#  Coding Conf Ticket Generator
 
 Coding Conf 2025 Ticket Generator is a sleek React-based web app that lets users register for the event and instantly create a personalized digital ticket. Just upload your avatar, enter your name, email, and GitHub handle — and watch your custom-styled ticket come to life in real time. Built for a smooth, interactive experience, it's the perfect way to showcase your spot at the conference!
 
-## 🚀 Demo
+##  Demo
 
 Live Demo —  https://ticket-generator-ten-rouge.vercel.app/
 
 ---
 
-## 📸 Preview
+##  Preview
 
 - Register Page
 
@@ -20,17 +20,17 @@ Live Demo —  https://ticket-generator-ten-rouge.vercel.app/
 
 ---
 
-## ✨ Features
+##  Features
 
-- 🖼️ Upload your avatar (JPG/PNG under 500KB)
-- 📝 Input and validate user details (name, email, GitHub)
-- 🎫 Automatically generate a stylized digital ticket
-- ✅ Responsive layout for mobile and desktop
-- 💌 Confirmation message showing email acknowledgment
+-  Upload your avatar (JPG/PNG under 500KB)
+-  Input and validate user details (name, email, GitHub)
+-  Automatically generate a stylized digital ticket
+-  Responsive layout for mobile and desktop
+-  Confirmation message showing email acknowledgment
 
 ---
 
-## 🛠 Tech Stack
+## Tech Stack
 
 - **React 18+**
 - **Tailwind CSS** for styling
@@ -38,7 +38,7 @@ Live Demo —  https://ticket-generator-ten-rouge.vercel.app/
 
 ---
 
-## 📦 Installation Guide
+##  Installation Guide
 
 Follow these steps to set up the frontend application locally:
 
@@ -74,7 +74,7 @@ Follow these steps to set up the frontend application locally:
     
    The application will be available at http://localhost:5173.
 
-## 🤝 Contribution
+##  Contribution
 
 Contributions are always welcome! If you'd like to contribute to this project, follow these steps:
 
@@ -116,11 +116,11 @@ Contributions are always welcome! If you'd like to contribute to this project, f
 
 ---
 
-### 💡 Guidelines
+###  Guidelines
 
 - Ensure your code follows the project's coding standards.
 - Write clear and concise commit messages.
 - Test your changes thoroughly before submitting a pull request.
 - If you're adding a new feature, update the documentation accordingly.
 
-Thank you for contributing! 😊
+Thank you for contributing!
