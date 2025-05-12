@@ -85,8 +85,8 @@ Contributions are always welcome! If you'd like to contribute to this project, f
    Clone your forked repository to your local machine:
 
    ```bash
-   git clone https://github.com/your-username/realtime-collab-editor.git
-   cd realtime-collab-editor
+   git clone https://github.com/your-username/wasserstoff-task2.git
+   cd wasserstoff-task2
    ```
 
 3. **Create a New Branch**  
