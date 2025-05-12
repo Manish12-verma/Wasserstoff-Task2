@@ -78,8 +78,8 @@ const Register = () => {
       className="relative min-h-screen w-full bg-blue-900 bg-cover bg-no-repeat text-white flex flex-col items-center justify-center px-2 py-4"
       style={{ backgroundImage: `url(${assets.bgDesktop})` }}
     >
-      {/* Decorative Images */}
-      <img src={assets.patternLines} alt="Pattern" className="absolute top-0 left-0 w-full h-full object-cover opacity-30 z-0" />
+      
+      <img src={assets.patternLines} alt="Pattern" className="absolute top-0 left-0 w-full h-full object-cover opacity-60 z-0" />
       <img src={assets.patternSquigglyLineTop} alt="Pattern" className="absolute top-10 right-0 transform -translate-x-1/2 opacity-90 z-0" />
       <img src={assets.patternSquigglyLineBottom} alt="Pattern" className="absolute w-120 bottom-0 left-0 opacity-70 z-0 " />
       <img src={assets.patternCircle} alt="Circle" className="absolute -top-16 left-16 w-48 opacity-80 z-0" />
@@ -93,7 +93,6 @@ const Register = () => {
           <p className="text-xs text-gray-400 mt-3 font-bold">Secure your spot at next year's biggest coding conference.</p>
         </div>
 
-        {/* Avatar Upload */}
         <div className="mb-5">
           <h3 className="text-base font-semibold mb-2">Upload Avatar</h3>
           <div className="border border-dashed border-gray-400 p-4 rounded-lg text-center">
@@ -135,7 +134,7 @@ const Register = () => {
           </p>
         </div>
 
-        {/* Input Fields */}
+       
         <div className="space-y-4">
           <div>
             <label htmlFor="fullName" className="block font-medium mb-1 text-sm">Full Name</label>
@@ -175,7 +174,7 @@ const Register = () => {
           </div>
         </div>
 
-        {/* Submit Button */}
+       
         <div className="text-center mt-6">
           <button
             className="bg-orange-700 hover:bg-orange-600 text-white px-5 py-3 rounded-lg text-base w-full"
