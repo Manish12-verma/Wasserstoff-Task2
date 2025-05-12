@@ -11,15 +11,16 @@ const Register = () => {
   const [errors, setErrors] = useState({});
   const [submitted, setSubmitted] = useState(false);
   const fileInputRef = useRef(null);
+  
 
-  const isValidEmail = (email) => {
+  const isValidEmail = (email)=> {
     if (!email.includes('@')) return false;
     const [local, domain] = email.split('@');
     if (!local.trim() || !domain.trim()) return false;
     const domainParts = domain.split('.');
     return domainParts.length >= 2 && domainParts.at(-1).length >= 2;
   };
-
+ 
   const isValidGitHubUsername = (username) => {
     return username.startsWith('@') && !username.includes(' ');
   };
@@ -63,8 +64,6 @@ const Register = () => {
   const handleSubmit = () => {
     if (handleValidation()) {
       setSubmitted(true);
-      // You can navigate or process the data here
-      // navigate("/ticket"); // example
     }
   };
 
@@ -88,7 +87,7 @@ const Register = () => {
       {!submitted ? (
       <div className="z-10 w-full max-w-md bg-opacity-100 rounded-xl text-white  scale-85 ">
         <div className="text-center mb-6">
-          <img src={assets.logo} alt="logo" className="mx-auto w-38 mb-3" />
+          <img src={assets.logo} alt="logo" className="mx-auto w-38 mb-3 scale-130 relative "/>
           <h1 className="text-2xl font-bold">Your Journey to Coding Conf 2025 Starts Here!</h1>
           <p className="text-xs text-gray-400 mt-3 font-bold">Secure your spot at next year's biggest coding conference.</p>
         </div>
@@ -174,7 +173,8 @@ const Register = () => {
           </div>
         </div>
 
-       
+  
+  
         <div className="text-center mt-6">
           <button
             className="bg-orange-700 hover:bg-orange-600 text-white px-5 py-3 rounded-lg text-base w-full"
